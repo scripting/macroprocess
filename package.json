@@ -1,0 +1,22 @@
+{
+	"name": "macroprocess",
+	"description": "A general purpose shell for macro processing.",
+	"author": "Dave Winer <dave@scripting.com>",
+	"license": "MIT",
+	"version": "0.4.3",
+	"main": "macroprocess.js",
+	"files": [
+		"macroprocess.js",
+		"test.js"
+		],
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/scripting/macroprocess.git"
+		},
+	"dependencies" : {
+		"daveutils": "*"
+		}, 
+	"engines": {
+		"node": "*"
+		}
+	}
