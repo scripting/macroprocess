@@ -1,5 +1,6 @@
 const utils = require ("daveutils");
-const macroprocess = require ("./macroprocess.js");
+const macroprocess = require ("macroprocess");
+//const macroprocess = require ("./macroprocess.js");
 
 const options = {
 	startChars: "[%",
@@ -16,4 +17,4 @@ const options = {
 		}
 	};
 
-console.log (macroprocess.process ("oh the [%search: hunky dory%] buzzing", options));
+console.log (macroprocess ("oh the [%search: hunky dory%] buzzing", options));

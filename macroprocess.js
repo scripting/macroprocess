@@ -1,9 +1,12 @@
-var myVersion = "0.4.3", myProductName = "macroprocess";
+var myVersion = "0.4.4", myProductName = "macroprocess";
 
 const fs = require ("fs"); 
 const utils = require ("daveutils");
 
-exports.process = function (s, options) { 
+module.exports = function (s, options) { 
+	//Changes
+		//8/31/20; 11:36:49 AM by DW
+			//each of options.startChars and endChars are assumed to have two chars. 
 	if (options.startChars === undefined) {
 		options.startChars = "[%";
 		}
@@ -12,6 +15,10 @@ exports.process = function (s, options) {
 		}
 	var i = 0;
 	function evalMacro (macrotext) {
+		//Changes
+			//9/2/20; 10:51:01 AM by DW
+				//Macros are in this form:
+					//[%search: hello world%]
 		if (options.delimiter !== undefined) {
 			if (options.handlers !== undefined) {
 				var part1 = utils.stringNthField (macrotext, options.delimiter, 1);
